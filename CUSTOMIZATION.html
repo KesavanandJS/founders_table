@@ -1,0 +1,287 @@
+<!-- 
+    FOUNDERS TABLE - CUSTOMIZATION GUIDE
+    
+    This file contains all the placeholders and configuration points
+    you can easily customize to match your community branding.
+    
+    Search for these sections in your files to make changes:
+-->
+
+<!-- ============================================
+     1. CUSTOMIZE IN index.html
+     ============================================ -->
+
+<!-- Navigation Logo -->
+<logo-placeholder>
+    Location: Line ~25 in index.html
+    Current: <div class="logo"><i class="fas fa-table"></i> Founders Table</div>
+    Change to: <div class="logo"><i class="fas fa-your-icon"></i> Your Community Name</div>
+</logo-placeholder>
+
+<!-- Hero Section -->
+<hero-placeholder>
+    Location: Lines ~65-80 in index.html
+    
+    Hero Title:
+    Current: "A Circle of Bold Founders"
+    Change to: Your compelling headline
+    
+    Hero Subtitle:
+    Current: "Shaping what's next. A space built..."
+    Change to: Your community tagline
+</hero-placeholder>
+
+<!-- Event Registration Prices -->
+<event-prices-placeholder>
+    Location: Lines ~280-380 in index.html
+    
+    Event 1 Price: Line ~305 - 499
+    Event 2 Price: Line ~335 - 799
+    Event 3 Price: Line ~365 - 599
+    Event 4 Price: Line ~395 - 899
+    
+    To change: Find `<div class="event-price">₹XXX</div>`
+</event-prices-placeholder>
+
+<!-- Social Media Links -->
+<social-links-placeholder>
+    Location: Lines ~590-600 in index.html
+    
+    Instagram: Find href="#" and replace with your Instagram URL
+    LinkedIn: Find href="#" and replace with your LinkedIn URL
+    Twitter: Find href="#" and replace with your Twitter URL
+    Facebook: Find href="#" and replace with your Facebook URL
+</social-links-placeholder>
+
+<!-- Footer Contact Info -->
+<footer-contact-placeholder>
+    Location: Lines ~610-615 in index.html
+    
+    Current Email: hello@founderstable.com
+    Current Phone: +91 9876543210
+    
+    Change to your actual contact information
+</footer-contact-placeholder>
+
+<!-- ============================================
+     2. CUSTOMIZE IN styles.css
+     ============================================ -->
+
+<!-- Brand Colors -->
+<color-customization>
+    Location: Lines ~7-16 in styles.css
+    
+    :root {
+        --primary-color: #1a73e8;      /* Change to your primary brand color */
+        --secondary-color: #34a853;    /* Change to your secondary brand color */
+        --accent-color: #ea4335;       /* Change to your accent color */
+        --dark-bg: #0f1419;            /* Dark backgrounds */
+        --light-bg: #ffffff;           /* Light backgrounds */
+        --text-dark: #202124;          /* Dark text */
+        --text-light: #5f6368;         /* Light text */
+        --border-color: #dadce0;       /* Border color */
+    }
+    
+    Example: Replace #1a73e8 with #FF6B35 for orange brand
+</color-customization>
+
+<!-- Logo/Brand Name Font -->
+<logo-font-customization>
+    Location: Line ~106 in styles.css
+    
+    .logo {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--primary-color);
+    }
+    
+    Increase font-size to make logo bigger/smaller
+</logo-font-customization>
+
+<!-- ============================================
+     3. CUSTOMIZE IN script.js
+     ============================================ -->
+
+<!-- Razorpay Configuration -->
+<razorpay-config>
+    Location: Line ~128 in script.js
+    
+    CRITICAL: Update this with your Razorpay Key ID
+    
+    Current: key: 'rzp_live_YOUR_KEY_ID',
+    
+    Replace with your actual key:
+    key: 'rzp_live_A1B2C3D4E5F6G7H8I9J0',
+    
+    For testing, use:
+    key: 'rzp_test_1DP5mmOlF5G5ag',
+</razorpay-config>
+
+<!-- Payment Success Message -->
+<payment-success-message>
+    Location: Line ~159 in script.js
+    
+    Current alert message mentions "Founders Table"
+    Change text to match your community name
+</payment-success-message>
+
+<!-- ============================================
+     4. QUICK CUSTOMIZATION CHECKLIST
+     ============================================ -->
+
+ESSENTIAL CHANGES (Before Going Live):
+☐ Update community name in HTML
+☐ Set Razorpay Key ID in script.js
+☐ Update brand colors in styles.css
+☐ Add social media links
+☐ Update contact email and phone
+☐ Change testimonial names/quotes
+☐ Update founder information
+☐ Set actual event dates and prices
+
+OPTIONAL ENHANCEMENTS:
+☐ Add logo image/icon
+☐ Upload founder photos
+☐ Add event images/banners
+☐ Create custom email templates
+☐ Set up backend for data storage
+☐ Configure email notifications
+☐ Add analytics tracking
+☐ Implement newsletter signup
+
+<!-- ============================================
+     5. COLOR PALETTE SUGGESTIONS
+     ============================================ -->
+
+MODERN TECH STARTUPS:
+--primary-color: #6366F1;      /* Indigo */
+--secondary-color: #3B82F6;    /* Blue */
+--accent-color: #EC4899;       /* Pink */
+
+CORPORATE PROFESSIONAL:
+--primary-color: #1E40AF;      /* Navy Blue */
+--secondary-color: #0891B2;    /* Cyan */
+--accent-color: #DC2626;       /* Red */
+
+CREATIVE & VIBRANT:
+--primary-color: #9333EA;      /* Purple */
+--secondary-color: #F59E0B;    /* Amber */
+--accent-color: #10B981;       /* Green */
+
+MINIMALIST & CLEAN:
+--primary-color: #262626;      /* Dark Gray */
+--secondary-color: #6B7280;    /* Medium Gray */
+--accent-color: #3B82F6;       /* Blue */
+
+<!-- ============================================
+     6. EVENT CUSTOMIZATION TEMPLATE
+     ============================================ -->
+
+To add a new event, copy this template and update:
+
+<!-- NEW EVENT CARD -->
+<div class="event-card">
+    <div class="event-date">
+        <span class="month">JAN</span>
+        <span class="day">25</span>
+    </div>
+    <div class="event-info">
+        <h3>Event Title Here</h3>
+        <p class="event-description">Brief description of the event (1-2 sentences)</p>
+        <div class="event-meta">
+            <span><i class="fas fa-map-marker-alt"></i> Location</span>
+            <span><i class="fas fa-clock"></i> Time</span>
+        </div>
+        <div class="event-price">₹Price</div>
+        <button class="btn btn-primary btn-register" onclick="openPaymentModal(EVENT_ID, 'Event Title Here', PRICE)">Register Now</button>
+    </div>
+</div>
+
+Example:
+<button class="btn btn-primary btn-register" onclick="openPaymentModal(5, 'Networking Event', 599)">Register Now</button>
+
+<!-- ============================================
+     7. TESTIMONIAL TEMPLATE
+     ============================================ -->
+
+To add a new testimonial, copy and update:
+
+<div class="testimonial-card">
+    <div class="stars">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+    </div>
+    <p>"Your testimonial text here. Be specific about the value gained."</p>
+    <div class="testimonial-author">
+        <div class="author-avatar">AB</div>
+        <div>
+            <h4>Person Name</h4>
+            <p>Title, Company Name</p>
+        </div>
+    </div>
+</div>
+
+Tips:
+- Keep testimonials 50-100 words
+- Include specific results/benefits
+- Use real names and companies
+- Update avatar initials (AB for "Adam Brown")
+
+<!-- ============================================
+     8. FAQ CUSTOMIZATION TEMPLATE
+     ============================================ -->
+
+To add a new FAQ item:
+
+<div class="faq-item">
+    <div class="faq-question" onclick="toggleFAQ(this)">
+        <h3>Your Question Here?</h3>
+        <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
+    </div>
+    <div class="faq-answer">
+        <p>Your detailed answer goes here. Make it clear and helpful.</p>
+    </div>
+</div>
+
+<!-- ============================================
+     9. DEPLOYMENT CONFIGURATION
+     ============================================ -->
+
+ENVIRONMENT VARIABLES (For Backend):
+RAZORPAY_KEY_ID=rzp_live_YOUR_KEY_ID
+RAZORPAY_SECRET=YOUR_SECRET_KEY
+DATABASE_URL=your_database_connection_string
+SMTP_HOST=smtp.gmail.com
+SMTP_USER=your_email@gmail.com
+SMTP_PASS=your_app_password
+
+<!-- ============================================
+     10. SEO CUSTOMIZATION
+     ============================================ -->
+
+Update in index.html <head> section:
+- <title>Founders Table - Community for Business Owners</title>
+- Add meta description
+- Add meta keywords
+- Add Open Graph tags for social sharing
+
+Example:
+<meta name="description" content="Connect with ambitious founders and business owners at Founders Table. Join curated events, get mentorship, and grow your business.">
+<meta name="keywords" content="founders, entrepreneurs, business community, networking">
+<meta property="og:title" content="Founders Table">
+<meta property="og:description" content="A community for ambitious business owners">
+<meta property="og:image" content="your-image-url">
+
+<!-- ============================================
+     READY TO CUSTOMIZE?
+     
+     1. Start with color palette
+     2. Update community information
+     3. Set Razorpay keys
+     4. Customize events and testimonials
+     5. Test on mobile
+     6. Deploy!
+     ============================================ -->

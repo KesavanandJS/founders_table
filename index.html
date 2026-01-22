@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Founders Table - Community for Business Owners</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-table"></i> Founders Table
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#benefits" class="nav-link">Benefits</a></li>
+                <li><a href="#events" class="nav-link">Events</a></li>
+                <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">A Circle of Bold Founders</h1>
+            <p class="hero-subtitle">Shaping what's next. A space built for sharp minds to connect, collaborate, and grow faster together.</p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary" onclick="scrollToEvents()"><span>Register Next Event</span></button>
+                <button class="btn btn-secondary"><span>Learn More</span></button>
+            </div>
+            <div class="hero-tags">
+                <span class="tag">NETWORKING</span>
+                <span class="tag">COLLABORATION</span>
+                <span class="tag">GROWTH</span>
+                <span class="tag">CULTURE</span>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="floating-cards">
+                <div class="card card-1">Community</div>
+                <div class="card card-2">Events</div>
+                <div class="card card-3">Growth</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="about-content">
+            <div class="about-text">
+                <h2>About Founders Table</h2>
+                <p>We're building a founder-first community where ambitious business owners come together to connect, collaborate, and scale. Every member is intentional. Every event is curated. We bring niche-driven businesses into one room where honest conversations lead to real progress.</p>
+                <p>No noise, no filler, just builders who want to move forward. We exist to make the business community a strong, evolving hub for founders who want clarity, support, and the right network.</p>
+            </div>
+            <div class="about-stats">
+                <div class="stat">
+                    <h3>500+</h3>
+                    <p>Active Members</p>
+                </div>
+                <div class="stat">
+                    <h3>50+</h3>
+                    <p>Events Held</p>
+                </div>
+                <div class="stat">
+                    <h3>100+</h3>
+                    <p>Business Connections</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits" class="benefits">
+        <h2>The Unfair Advantage for Founders</h2>
+        <div class="benefits-grid">
+            <div class="benefit-card">
+                <div class="benefit-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <h3>Curated Founder Gatherings</h3>
+                <p>Every event is carefully curated. Every member is intentional. We bring together like-minded founders to create an environment where real progress happens.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <h3>Focused Mentorship</h3>
+                <p>Get guidance from experienced operators who help you clarify your direction and connect with industry veterans who've walked the path.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">
+                    <i class="fas fa-lock"></i>
+                </div>
+                <h3>Member-Exclusive Resources</h3>
+                <p>Unlock insights, advantages, and tools specifically designed for serious builders. Get access to templates, guides, and exclusive content.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">
+                    <i class="fas fa-comments"></i>
+                </div>
+                <h3>Private Community</h3>
+                <p>Access our digital community where real opportunities and collaboration happen. Direct messaging, group discussions, and deal flow.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">
+                    <i class="fas fa-handshake"></i>
+                </div>
+                <h3>Strategic Partnerships</h3>
+                <p>Connect with potential partners, investors, and service providers who can accelerate your growth journey.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <h3>Growth Support</h3>
+                <p>From fundraising guidance to scaling strategies, get the support you need to take your business to the next level.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section id="events" class="events">
+        <h2>Upcoming Events</h2>
+        <div class="events-container">
+            <!-- Event 1 -->
+            <div class="event-card">
+                <div class="event-date">
+                    <span class="month">FEB</span>
+                    <span class="day">15</span>
+                </div>
+                <div class="event-info">
+                    <h3>Founders Networking Mixer</h3>
+                    <p class="event-description">Connect with 50+ entrepreneurs and business owners in an intimate setting. Perfect for making meaningful connections.</p>
+                    <div class="event-meta">
+                        <span><i class="fas fa-map-marker-alt"></i> Grand Ballroom, City Center</span>
+                        <span><i class="fas fa-clock"></i> 6:00 PM - 9:00 PM</span>
+                    </div>
+                    <div class="event-price">₹499</div>
+                    <button class="btn btn-primary btn-register" onclick="openPaymentModal(1, 'Founders Networking Mixer', 499)">Register Now</button>
+                </div>
+            </div>
+
+            <!-- Event 2 -->
+            <div class="event-card">
+                <div class="event-date">
+                    <span class="month">FEB</span>
+                    <span class="day">22</span>
+                </div>
+                <div class="event-info">
+                    <h3>Scale Your Business: Funding & Growth Strategy</h3>
+                    <p class="event-description">Learn from successful founders about fundraising, scaling strategies, and growth hacks that actually work.</p>
+                    <div class="event-meta">
+                        <span><i class="fas fa-map-marker-alt"></i> Innovation Hub, Tech Park</span>
+                        <span><i class="fas fa-clock"></i> 5:00 PM - 8:00 PM</span>
+                    </div>
+                    <div class="event-price">₹799</div>
+                    <button class="btn btn-primary btn-register" onclick="openPaymentModal(2, 'Scale Your Business: Funding & Growth Strategy', 799)">Register Now</button>
+                </div>
+            </div>
+
+            <!-- Event 3 -->
+            <div class="event-card">
+                <div class="event-date">
+                    <span class="month">MAR</span>
+                    <span class="day">05</span>
+                </div>
+                <div class="event-info">
+                    <h3>Women Founders Roundtable</h3>
+                    <p class="event-description">An exclusive gathering for women entrepreneurs to share experiences, challenges, and celebrate successes.</p>
+                    <div class="event-meta">
+                        <span><i class="fas fa-map-marker-alt"></i> Executive Lounge, Downtown</span>
+                        <span><i class="fas fa-clock"></i> 4:00 PM - 7:00 PM</span>
+                    </div>
+                    <div class="event-price">₹599</div>
+                    <button class="btn btn-primary btn-register" onclick="openPaymentModal(3, 'Women Founders Roundtable', 599)">Register Now</button>
+                </div>
+            </div>
+
+            <!-- Event 4 -->
+            <div class="event-card">
+                <div class="event-date">
+                    <span class="month">MAR</span>
+                    <span class="day">15</span>
+                </div>
+                <div class="event-info">
+                    <h3>Product-Market Fit Workshop</h3>
+                    <p class="event-description">Deep dive into finding your product-market fit. Interactive workshop with real case studies and actionable frameworks.</p>
+                    <div class="event-meta">
+                        <span><i class="fas fa-map-marker-alt"></i> Learning Center, Business District</span>
+                        <span><i class="fas fa-clock"></i> 10:00 AM - 1:00 PM</span>
+                    </div>
+                    <div class="event-price">₹899</div>
+                    <button class="btn btn-primary btn-register" onclick="openPaymentModal(4, 'Product-Market Fit Workshop', 899)">Register Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <h2>What Founders Say About Us</h2>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p>"I found my technical co-founder at a Founders Table event. The quality of founders here is exceptional and truly helped me take my business to the next level."</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">RK</div>
+                    <div>
+                        <h4>Rajesh Kumar</h4>
+                        <p>CEO, TechValley Solutions</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p>"The mentorship program at Founders Table gave me the guidance I needed to pivot my brand. This ecosystem is invaluable for any serious entrepreneur."</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">SR</div>
+                    <div>
+                        <h4>Sneha Reddy</h4>
+                        <p>Founder, Greenloom Fashion</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p>"Founders Table opened doors I didn't even know existed. The network alone is worth it. Best investment in my entrepreneurial journey."</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">AK</div>
+                    <div>
+                        <h4>Arun Karthik</h4>
+                        <p>Director, AK Innovations</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p>"Professional, well-organized, and genuinely focused on helping founders succeed. Every event is valuable and the community is incredibly supportive."</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">MP</div>
+                    <div>
+                        <h4>Priya Mehta</h4>
+                        <p>Founder, Digital Marketing Co.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq">
+        <h2>Common Questions</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <h3>Who can join Founders Table?</h3>
+                    <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
+                </div>
+                <div class="faq-answer">
+                    <p>We welcome entrepreneurs, business owners, and founders at all stages of their journey. Whether you're just starting out or scaling to new heights, Founders Table is designed for builders who are serious about growth and community.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <h3>How often do events happen?</h3>
+                    <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
+                </div>
+                <div class="faq-answer">
+                    <p>We organize at least 2-3 events every month, including networking mixers, workshops, mentorship sessions, and special founder forums. Members get early access to event registrations and exclusive discounts.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <h3>What is the membership fee?</h3>
+                    <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
+                </div>
+                <div class="faq-answer">
+                    <p>Event registration fees range from ₹499 to ₹899 depending on the event type and duration. We also offer annual membership packages with exclusive benefits and discounted event access. Contact us for membership details.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <h3>Can I get a refund if I can't attend?</h3>
+                    <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes, we offer full refunds for cancellations made at least 7 days before the event. Cancellations within 7 days of the event are non-refundable but may be transferred to another event or another person.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <h3>How do I stay updated with Founders Table?</h3>
+                    <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
+                </div>
+                <div class="faq-answer">
+                    <p>Follow us on Instagram and LinkedIn for updates, tips, and exclusive content. Join our WhatsApp community for real-time event announcements and networking opportunities with other founders.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="cta-content">
+            <h2>Ready to Join the Community?</h2>
+            <p>Connect with ambitious founders, get mentorship, and accelerate your growth journey.</p>
+            <button class="btn btn-primary btn-large" onclick="scrollToEvents()">Register for Next Event</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Founders Table</h4>
+                <p>A community for ambitious business owners to connect, collaborate, and grow.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#events">Events</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Connect</h4>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>Email: hello@founderstable.com</p>
+                <p>Phone: +91 9876543210</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Founders Table. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#terms">Terms & Conditions</a>
+                <a href="#refund">Refund Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Payment Modal -->
+    <div id="paymentModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closePaymentModal()">&times;</span>
+            <div class="modal-header">
+                <h2>Event Registration</h2>
+            </div>
+            <form id="registrationForm" class="registration-form">
+                <div class="form-group">
+                    <label for="eventName">Event</label>
+                    <input type="text" id="eventName" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="fullName">Full Name *</label>
+                    <input type="text" id="fullName" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number *</label>
+                    <input type="tel" id="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="company">Company Name</label>
+                    <input type="text" id="company">
+                </div>
+                <div class="form-group">
+                    <label for="designation">Designation</label>
+                    <input type="text" id="designation">
+                </div>
+                <div class="price-display">
+                    <span>Total Amount:</span>
+                    <span id="totalPrice" class="amount">₹0</span>
+                </div>
+                <button type="button" class="btn btn-primary btn-full" onclick="processPayment()">Pay with Razorpay</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
