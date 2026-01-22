@@ -247,6 +247,9 @@ function handlePaymentSuccess(response, fullName, email, phone, company, designa
     registrations.push(registrationData);
     localStorage.setItem('registrations', JSON.stringify(registrations));
     
+    // Send to Google Sheets
+    sendToGoogleSheets(registrationData);
+    
     // Show success notification
     showNotification(`Welcome ${fullName}! Registration confirmed! 🎉`, 'success');
     
@@ -417,4 +420,45 @@ function logRegistrations() {
     const registrations = JSON.parse(localStorage.getItem('registrations')) || [];
     console.log('All Registrations:', registrations);
     return registrations;
+}
+
+// Send registration data to Google Sheets
+function sendToGoogleSheets(registrationData) {
+    // Replace with your Google Apps Script Web App URL
+    const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxolYpoS3XuYC4aBnwQCYmWiLyoSyyRXVCHvFMgyEFFU5vHkNvEB0nC4q148J6D2EIm/exec';
+    
+    // Check if URL is configured
+    if (GOOGLE_SCRIPT_URL.includes('YOUR_SCRIPT_ID')) {
+        console.warn('Google Sheets integration not configured. Please add your Google Apps Script URL.');
+        console.log('Registration data ready to send:', registrationData);
+        return;
+    }
+    
+    // Format data for Google Sheets
+    const payload = {
+        timestamp: new Date().toLocaleString('en-IN'),
+        event_id: registrationData.event_id,
+        event_name: registrationData.event_name,
+        full_name: registrationData.full_name,
+        email: registrationData.email,
+        phone: registrationData.phone,
+        company: registrationData.company || 'N/A',
+        designation: registrationData.designation || 'N/A',
+        amount: registrationData.amount,
+        payment_id: registrationData.payment_id,
+        registration_date: registrationData.registration_date
+    };
+    
+    // Send to Google Sheets via Apps Script
+    fetch(GOOGLE_SCRIPT_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        body: JSON.stringify(payload)
+    })
+    .then(response => {
+        console.log('Data sent to Google Sheets successfully');
+    })
+    .catch(error => {
+        console.error('Error sending to Google Sheets:', error);
+    });
 }
